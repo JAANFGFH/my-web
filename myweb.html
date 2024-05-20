@@ -1,0 +1,259 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="p:domain_verify" content="63ffffc4512aa51571dee26d1b60fea9"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome Landing Page</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    /* Header Styles */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    
+    header p {
+      font-size: 1.5rem;
+    }
+    
+    /* Main Content Styles */
+    .main-content {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .main-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #ff5e3a;
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none; /* Added */
+    }
+
+    .cta-button:hover {
+      background-color: #ff7b5c;
+    }
+
+    /* Footer Styles */
+    footer {
+      margin-top: 40px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    /* Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animated {
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .pulse-animation {
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    /* Success Message Box Styles */
+    .success-message {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      max-width: 600px;
+      text-align: left;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .success-message h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .success-message p {
+      font-size: 1.2rem;
+    }
+
+    /* Countdown Timer Container */
+    .countdown-timer-container {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 2rem;
+      position: relative;
+      font-weight: bold;
+    }
+
+    .countdown-timer {
+      color: #ff5e3a; /* Using the same color as the CTA button for consistency */
+      letter-spacing: 2px;
+      animation: countFadeIn 3s ease forwards;
+    }
+
+    .sub-text {
+      font-size: 1.5rem;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    /* More Appealing Animation */
+    @keyframes countFadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Add some keyframe animations for periodic attention */
+    @keyframes flash {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    .countdown-timer.flash-animation {
+      animation: flash 1s infinite;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .success-message {
+        padding: 15px;
+      }
+      .main-content h2 {
+        font-size: 2rem;
+      }
+      .cta-button {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Win $1000 Every Minute!</h1>
+    <p>Watch Your Winnings Stack Up!</p>
+  </header>
+
+  <div class="container">
+    <div class="main-content">
+      <div class="success-message animated pulse-animation">
+        <h3>Congratulations!</h3>
+        <p>This is your lucky day! You've just unlocked a special offer worth $100! Act fast, it won't last long!</p>
+      </div>
+      <h2>Ready to Claim Your Prize?</h2>
+      <p>Click the button below to grab your $100 now!</p>
+      <a href="https://beatforumsubstitute.com/y5ikzwwu0?key=cfe8318024f56681f7d847c9f39f18b4" class="cta-button animated">Claim $100 Now!</a>
+    </div>
+  </div>
+
+  <!-- Countdown Timer Container -->
+  <div class="countdown-timer-container">
+    <div id="countdown" class="countdown-timer flash-animation"></div>
+    <div class="sub-text">Hurry up! Time is running out!</div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Your Awesome Company. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Countdown Timer
+    var countDownDate = new Date().getTime() + (3 * 60 * 1000); // 3 minutes from now
+
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML = minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+
+  <!-- External Scripts -->
+  <script async src="//beatforumsubstitute.com/5faadf2b4a3f951244b133d11fd1f77f/invoke.js"></script>
+  <div id="container-5faadf2b4a3f951244b133d11fd1f77f"></div>
+
+  <script src="//beatforumsubstitute.com/0d/3f/f9/0d3ff92a0385f4a88c16c5d48d77d846.js"></script>
+</body>
+</html>
